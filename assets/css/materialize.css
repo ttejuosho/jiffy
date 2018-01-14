@@ -3445,7 +3445,7 @@ nav ul a span.badge {
 
 .row .col.s3 {
   width: 25%;
-  margin-left: auto;
+  margin-top: 20px;
   left: auto;
   right: auto;
 }
@@ -5206,8 +5206,8 @@ small {
 
 .btn, .btn-large {
   text-decoration: none;
-  color: #fff;
-  background-color: #26a69a;
+  color: rgb(241, 241, 240);
+  background-color: #641474;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;
@@ -5216,7 +5216,7 @@ small {
 }
 
 .btn:hover, .btn-large:hover {
-  background-color: #2bbbad;
+  background-color: #a961ec;
 }
 
 .btn-floating {
