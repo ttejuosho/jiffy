@@ -66,10 +66,10 @@ $(document).ready(function (){
     }
 
 
-  
+    
 // When user clicks on a header Link run the header Link function
     $("#header-links li").on("click", headerLinkftn)
-
+    
 
 
 
@@ -92,12 +92,23 @@ $.ajax({
   method: 'GET'
 }).done(function(response) {
   console.log(response);
-
+  var gifImg = response.data[i].images.fixed_height.url;
   // run through all the results, get the image and save in a variable 
   for (var i = 0; i < 1000; i++) {
 
-    var gifImg = response.data[i].images.fixed_height.url;
+    // if no gifs found Alert a message
+    if (response.data = []){
+      gifImg = "./images/notfound.gif";
 
+      // if gif is unavilable use our own image
+    } else if (gifImg === undefined){
+      gifImg = "./images/gifunavailable.gif";
+    }
+    
+    
+
+    
+    
     var newGif = $("<img>").addClass("jiffy").attr("src", gifImg)
     
     $(".jiffyResults").append(newGif)
@@ -111,5 +122,14 @@ $.ajax({
 
 // When user clicks on submit run the findgif function
 $("#findgif").on("click", findgif);
+
+
+// Back to top
+$('.a.top').click(function () {
+  $(document.body).animate({scrollTop: 0}, 800);
+  return false;
+});
+
+
 
 })
