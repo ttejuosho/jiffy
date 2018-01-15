@@ -18,9 +18,9 @@ footer{
     min-height: 710px;
 }
 
-h1{
+.brand-logo {
     color: white;
-    font-family: 'Joti One', cursive;
+    font-family: 'Sedgwick Ave Display', cursive;
 }
 
 /* .header-links{
