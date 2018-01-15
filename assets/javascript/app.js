@@ -1,28 +1,28 @@
 $(document).ready(function (){
 
-  // <!-- On Page Load Show Trending gifs -->
-  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=100";
+  // // <!-- On Page Load Show Trending gifs -->
+  // var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=100";
 
-  $.ajax({
-    url: queryURL,
-    method: 'GET'
-  }).done(function(response) {
-    console.log(response);
-    for (var i = 0; i < 1000; i++) {
+  // $.ajax({
+  //   url: queryURL,
+  //   method: 'GET'
+  // }).done(function(response) {
+  //   console.log(response);
+  //   for (var i = 0; i < 1000; i++) {
 
-      var gifImg = response.data[i].images.fixed_height.url;
-      var newGif = $("<img>").addClass("jiffy").attr("src", gifImg);
+  //     var gifImg = response.data[i].images.fixed_height.url;
+  //     var newGif = $("<img>").addClass("jiffy").attr("src", gifImg);
 
-      // if gif is unavilable use our own image
-      if (gifImg === undefined ){
-          gifImg = "./images/gifunavailable.gif";}
+  //     // if gif is unavilable use our own image
+  //     if (gifImg === undefined ){
+  //         gifImg = "./images/gifunavailable.gif";}
      
-    // show new image on the page
-      $('.jiffyResults').append(newGif);
+  //   // show new image on the page
+  //     $('.jiffyResults').append(newGif);
 
-    }
+  //   }
 
-  });
+  // });
 
 
   
@@ -96,10 +96,11 @@ $.ajax({
   // run through all the results, get the image and save in a variable 
   for (var i = 0; i < 1000; i++) {
 
-    // // if no gifs found Alert a message
-    // if (response.data = []){
-    //   gifImg = "./images/notfound.gif";
-    //   alert("No gifs found");
+    // if no gifs found Alert a message
+    if (response.data = []){
+      gifImg = "./images/notfound.gif";
+      alert("No gifs found"); }
+
     //   // if gif is unavilable use our own image
     // } else if (gifImg === undefined){
     //   gifImg = "./images/gifunavailable.gif";
@@ -107,7 +108,7 @@ $.ajax({
     
     
 
-    
+    var stillGifImg = response.data[i].images.fixed_height_still.url;
     var gifImg = response.data[i].images.fixed_height.url;
     var newGif = $("<img>").addClass("jiffy").attr("src", gifImg)
     
