@@ -1,2 +1,9 @@
 # jiffy
-Recreating Giphy with their own API
+
+<br>
+
+## This is a recreation of the Giphy Site with their own API
+
+
+# ![Jiffy ScreenShot](https://github.com/ttejuosho/jiffy/blob/master/assests/images/ScreenShot.png)
+
