@@ -84,7 +84,7 @@ function findgif(keyword) {
   var keyword = $("#search").val();
   
     // Ajax Call & query URL using the user input
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
     console.log(queryURL);
 
 $.ajax({
