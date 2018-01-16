@@ -1,7 +1,7 @@
 $(document).ready(function (){
 
   // <!-- On Page Load Show Trending gifs -->
-  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=100";
+  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=10";
 
   $.ajax({
     url: queryURL,
@@ -84,7 +84,7 @@ function findgif(keyword) {
   var keyword = $("#search").val();
   
     // Ajax Call & query URL using the user input
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=10";
     console.log(queryURL);
 
 $.ajax({
@@ -111,19 +111,51 @@ $.ajax({
     var still = response.data[i].images.fixed_height_still.url;
     var animated = response.data[i].images.fixed_height.url;
      
+
+
+    var shareDiv = $('<div>').addClass('fixed-action-btn horizontal click-to-toggle');
+    var sharea = $('<a>').addClass('btn-floating btn-large red');
+    var sharei = $('<i>').addClass('material-icons');
+    var UL = $('<ul></ul>');
+    var LI = $('<li></li>');
+    var sociala0 = $('<a>').addClass('btn-floating red');
+    var sociala1 = $('<a>').addClass('btn-floating yellow-darken-1');
+    var sociala2 = $('<a>').addClass('btn-floating green');
+    var sociala3 = $('<a>').addClass('btn-floating blue');
+
+
+
     var gifImg = $("<img>");
     gifImg.addClass("jiffy");
     gifImg.attr("src", still)
     gifImg.attr("data-still", still);
     gifImg.attr("data-animate", animated);
     gifImg.attr("data-state", "still");
+  
     
-    $(".jiffyResults").append(gifImg)
+    shareDiv.append(sharea);
+    sharea.html('<i class="material-icons">menu</i>');
+
+    shareDiv.append(UL);
+    UL.append(LI);
+    LI.append(sociala0).html('<i class="material-icons">instagram</i>');
+    sociala0.html('<i class="material-icons">instagram</i>');
+
+    // LI.append(sociala1).html('<i class="material-icons">facebook</i>');
+    // LI.append(sociala2).html('<i class="material-icons">twitter</i>');
+    // LI.append(sociala3).html('<i class="material-icons">envelope</i>');
+
+
+    $(".jiffyResults").append(gifImg);
+    gifImg.append(shareDiv);
+    
 
   }
 })
 }
 
+
+// Pause & Play Gifs
 $(document).on("click", ".jiffy", function() {
 
   var state = $(this).attr("data-state");
