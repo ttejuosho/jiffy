@@ -1,7 +1,7 @@
 $(document).ready(function (){
 
   // <!-- On Page Load Show Trending gifs -->
-  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=100";
 
   $.ajax({
     url: queryURL,
@@ -84,7 +84,7 @@ function findgif(keyword) {
   var keyword = $("#search").val();
   
     // Ajax Call & query URL using the user input
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
     console.log(queryURL);
 
 $.ajax({
@@ -117,7 +117,7 @@ $.ajax({
     var sharea = $('<a>').addClass('btn-floating btn-large red');
     var sharei = $('<i>').addClass('material-icons');
     var UL = $('<ul></ul>');
-    var LI = $('<li></li>');
+    var LI = $('<li>');
     var sociala0 = $('<a>').addClass('btn-floating red');
     var sociala1 = $('<a>').addClass('btn-floating yellow-darken-1');
     var sociala2 = $('<a>').addClass('btn-floating green');
