@@ -1,7 +1,7 @@
 $(document).ready(function (){
 
   // <!-- On Page Load Show Trending gifs -->
-  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=100";
+  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=10";
 
   $.ajax({
     url: queryURL,
@@ -39,7 +39,7 @@ $(document).ready(function (){
 
   
       // Ajax Call & query URL using the user input
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
+      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=10";
       console.log("You clicked ", keyword)
       console.log(queryURL);
   
@@ -84,7 +84,7 @@ function findgif(keyword) {
   var keyword = $("#search").val();
   
     // Ajax Call & query URL using the user input
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=10";
     console.log(queryURL);
 
 $.ajax({
@@ -94,7 +94,7 @@ $.ajax({
   console.log(response);
   
   // run through all the results, get the image and save in a variable 
-  for (var i = 0; i < 1000; i++) {
+  for (var i = 0; i < 10; i++) {
 
     // if no gifs found Alert a message
     // if (response.data = []){
@@ -117,7 +117,10 @@ $.ajax({
     var sharea = $('<a>').addClass('btn-floating btn-large red');
     var sharei = $('<i>').addClass('material-icons');
     var UL = $('<ul></ul>');
-    var LI = $('<li>');
+    var LI0 = $('<li>');
+    var LI1 = $('<li>');
+    var LI2 = $('<li>');
+    var LI3 = $('<li>');
     var sociala0 = $('<a>').addClass('btn-floating red');
     var sociala1 = $('<a>').addClass('btn-floating yellow-darken-1');
     var sociala2 = $('<a>').addClass('btn-floating green');
@@ -137,17 +140,23 @@ $.ajax({
     sharea.html('<i class="material-icons">menu</i>');
 
     shareDiv.append(UL);
-    UL.append(LI);
-    LI.append(sociala0).html('<i class="material-icons">instagram</i>');
+    UL.append(LI0);
+    UL.append(LI1);
+    UL.append(LI2);
+    UL.append(LI3);
+    LI0.append(sociala0);
+    LI1.append(sociala1);
+    LI2.append(sociala2);
+    LI3.append(sociala3);
     sociala0.html('<i class="material-icons">instagram</i>');
+    sociala1.html('<i class="material-icons">facebook</i>');
+    sociala2.html('<i class="material-icons">twitter</i>');
+    sociala3.html('<i class="material-icons">envelope</i>');
 
-    // LI.append(sociala1).html('<i class="material-icons">facebook</i>');
-    // LI.append(sociala2).html('<i class="material-icons">twitter</i>');
-    // LI.append(sociala3).html('<i class="material-icons">envelope</i>');
 
-
+    $(".jiffyResults").append(shareDiv);
     $(".jiffyResults").append(gifImg);
-    gifImg.append(shareDiv);
+    
     
 
   }
