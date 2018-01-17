@@ -97,9 +97,9 @@ $.ajax({
   for (var i = 0; i < 10; i++) {
 
     // if no gifs found Alert a message
-    // if (response.data = []){
-    //   gifImg = "./images/notfound.gif";
-    //   alert("No gifs found"); }
+    if (response.data = []){
+      gifImg = "./images/notfound.gif";
+      alert("No gifs found"); }
 
     //   // if gif is unavilable use our own image
     // } else if (gifImg === undefined){
