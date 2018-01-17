@@ -4271,7 +4271,7 @@ nav .brand-logo {
   display: inline-block;
   font-size: 3.1rem;
   padding: 0;
-  margin-left: 30px;
+  margin-left: 3px;
   margin-top: 10px;
 }
 
@@ -6018,7 +6018,7 @@ textarea.materialize-textarea {
   width: 100%;
   font-size: 2rem;
   font-family: 'Titillium Web', sans-serif;
-  margin: 0 0 20px 0;
+  margin: 0 20px;
   padding: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
