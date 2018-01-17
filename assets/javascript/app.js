@@ -4,14 +4,14 @@ $(document).ready(function (){
     $(".button-collapse").sideNav();
 
   // <!-- On Page Load Show Trending gifs -->
-  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=100";
+  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=1000";
 
   $.ajax({
     url: queryURL,
     method: 'GET'
   }).done(function(response) {
     // console.log(response);
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 1000; i++) {
 
       var gifImgOnLoad = response.data[i].images.fixed_height.url;
       var newGifOnLoad = $("<img>").addClass("jiffy").attr("src", gifImgOnLoad);
@@ -42,7 +42,7 @@ $(document).ready(function (){
 
   
       // Ajax Call & query URL using the user input
-      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=1000";
     //   console.log("You clicked ", keyword)
     //   console.log(queryURL);
   
@@ -53,7 +53,7 @@ $(document).ready(function (){
     // console.log(response);
   
     // run through all the results, get the image and save in a variable 
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 1000; i++) {
   
       var gifImg = response.data[i].images.fixed_height.url;
   
@@ -85,7 +85,7 @@ function findgif(keyword) {
   var keyword = $("#search").val();
   
     // Ajax Call & query URL using the user input
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=1000";
     // console.log(queryURL);
 
 $.ajax({
@@ -105,7 +105,7 @@ $.ajax({
 
 
   // run through all the results, get the image and save in a variable 
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 1000; i++) {
 
 // To make gifs pause and Play us lines 111 - 119 to define gifImg then 137 - 149
     // var still = response.data[i].images.fixed_height_still.url;
