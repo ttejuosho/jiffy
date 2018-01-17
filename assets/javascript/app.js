@@ -1,7 +1,9 @@
 $(document).ready(function (){
 
+    $(".button-collapse").sideNav();
+
   // <!-- On Page Load Show Trending gifs -->
-  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=100";
 
   $.ajax({
     url: queryURL,
@@ -39,7 +41,7 @@ $(document).ready(function (){
 
   
       // Ajax Call & query URL using the user input
-      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=10";
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
       console.log("You clicked ", keyword)
       console.log(queryURL);
   
@@ -68,7 +70,7 @@ $(document).ready(function (){
 
     
 // When user clicks on a header Link run the header Link function
-    $("#header-links li").on("click", headerLinkftn)
+    $(".header-links").on("click", headerLinkftn)
     
 
 
@@ -84,7 +86,7 @@ function findgif(keyword) {
   var keyword = $("#search").val();
   
     // Ajax Call & query URL using the user input
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
     console.log(queryURL);
 
 $.ajax({
