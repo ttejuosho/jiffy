@@ -1,5 +1,6 @@
 $(document).ready(function (){
 
+    // Materialize Side BAr function
     $(".button-collapse").sideNav();
 
   // <!-- On Page Load Show Trending gifs -->
@@ -61,8 +62,6 @@ $(document).ready(function (){
       $(".jiffyResults").append(newGif)
   
     }
-  
-  
   })
       
     }
@@ -76,7 +75,7 @@ $(document).ready(function (){
 
 
 
-
+// This function gets the gifs and sends them to the DOM
 function findgif(keyword) {
 
   // Empty the Jiffy Results Div
@@ -152,7 +151,7 @@ $.ajax({
 $("#findgif").on("click", findgif);
 
 
-// Back to top
+// Back to top icon
 $('.a.top').click(function () {
   $(document.body).animate({scrollTop: 0}, 800);
   return false;
