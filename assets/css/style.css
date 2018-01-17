@@ -18,6 +18,11 @@ footer{
     min-height: 710px;
 }
 
+#findgif{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
 .brand-logo {
     color: white;
     font-family: 'Macondo', cursive;
