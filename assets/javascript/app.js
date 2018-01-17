@@ -113,18 +113,18 @@ $.ajax({
      
 
 
-    var shareDiv = $('<div>').addClass('fixed-action-btn horizontal click-to-toggle');
-    var sharea = $('<a>').addClass('btn-floating btn-large red');
-    var sharei = $('<i>').addClass('material-icons');
-    var UL = $('<ul></ul>');
-    var LI0 = $('<li>');
-    var LI1 = $('<li>');
-    var LI2 = $('<li>');
-    var LI3 = $('<li>');
-    var sociala0 = $('<a>').addClass('btn-floating red');
-    var sociala1 = $('<a>').addClass('btn-floating yellow-darken-1');
-    var sociala2 = $('<a>').addClass('btn-floating green');
-    var sociala3 = $('<a>').addClass('btn-floating blue');
+    // var shareDiv = $('<div>').addClass('fixed-action-btn horizontal click-to-toggle');
+    // var sharea = $('<a>').addClass('btn-floating btn-large red');
+    // var sharei = $('<i>').addClass('material-icons');
+    // var UL = $('<ul></ul>');
+    // var LI0 = $('<li>');
+    // var LI1 = $('<li>');
+    // var LI2 = $('<li>');
+    // var LI3 = $('<li>');
+    // var sociala0 = $('<a>').addClass('btn-floating red');
+    // var sociala1 = $('<a>').addClass('btn-floating yellow-darken-1');
+    // var sociala2 = $('<a>').addClass('btn-floating green');
+    // var sociala3 = $('<a>').addClass('btn-floating blue');
 
 
 
@@ -136,25 +136,25 @@ $.ajax({
     gifImg.attr("data-state", "still");
   
     
-    shareDiv.append(sharea);
-    sharea.html('<i class="material-icons">menu</i>');
+    // shareDiv.append(sharea);
+    // sharea.html('<i class="material-icons">menu</i>');
 
-    shareDiv.append(UL);
-    UL.append(LI0);
-    UL.append(LI1);
-    UL.append(LI2);
-    UL.append(LI3);
-    LI0.append(sociala0);
-    LI1.append(sociala1);
-    LI2.append(sociala2);
-    LI3.append(sociala3);
-    sociala0.html('<i class="material-icons">instagram</i>');
-    sociala1.html('<i class="material-icons">facebook</i>');
-    sociala2.html('<i class="material-icons">twitter</i>');
-    sociala3.html('<i class="material-icons">envelope</i>');
+    // shareDiv.append(UL);
+    // UL.append(LI0);
+    // UL.append(LI1);
+    // UL.append(LI2);
+    // UL.append(LI3);
+    // LI0.append(sociala0);
+    // LI1.append(sociala1);
+    // LI2.append(sociala2);
+    // LI3.append(sociala3);
+    // sociala0.html('<i class="material-icons">instagram</i>');
+    // sociala1.html('<i class="material-icons">facebook</i>');
+    // sociala2.html('<i class="material-icons">twitter</i>');
+    // sociala3.html('<i class="material-icons">envelope</i>');
 
 
-    $(".jiffyResults").append(shareDiv);
+    // $(".jiffyResults").append(shareDiv);
     $(".jiffyResults").append(gifImg);
     
     
