@@ -10,7 +10,7 @@ $(document).ready(function (){
     url: queryURL,
     method: 'GET'
   }).done(function(response) {
-    console.log(response);
+    // console.log(response);
     for (var i = 0; i < 100; i++) {
 
       var gifImgOnLoad = response.data[i].images.fixed_height.url;
@@ -43,14 +43,14 @@ $(document).ready(function (){
   
       // Ajax Call & query URL using the user input
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
-      console.log("You clicked ", keyword)
-      console.log(queryURL);
+    //   console.log("You clicked ", keyword)
+    //   console.log(queryURL);
   
   $.ajax({
     url: queryURL,
     method: 'GET'
   }).done(function(response) {
-    console.log(response);
+    // console.log(response);
   
     // run through all the results, get the image and save in a variable 
     for (var i = 0; i < 100; i++) {
@@ -86,13 +86,13 @@ function findgif(keyword) {
   
     // Ajax Call & query URL using the user input
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
-    console.log(queryURL);
+    // console.log(queryURL);
 
 $.ajax({
   url: queryURL,
   method: 'GET'
 }).done(function(response) {
-  console.log(response);
+//   console.log(response);
 
     var gifImg;
     // if no gifs found Alert a message
