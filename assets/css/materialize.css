@@ -4478,7 +4478,7 @@ html {
 
   .btn{
     width:150%;
-    margin: auto 120%;
+    margin: auto 135%;
     
   }
 }
@@ -5210,7 +5210,7 @@ small {
 .btn-floating i,
 .btn-large i,
 .btn-flat i {
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   line-height: inherit;
 }
 
