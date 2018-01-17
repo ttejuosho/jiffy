@@ -39,7 +39,7 @@ $(document).ready(function (){
 
   
       // Ajax Call & query URL using the user input
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=10";
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=10";
       console.log("You clicked ", keyword)
       console.log(queryURL);
   
