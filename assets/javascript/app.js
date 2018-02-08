@@ -4,7 +4,7 @@ $(document).ready(function (){
     $(".button-collapse").sideNav();
 
   // <!-- On Page Load Show Trending gifs -->
-  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=1000";
+  var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=100";
 
   $.ajax({
     url: queryURL,
@@ -42,7 +42,7 @@ $(document).ready(function (){
 
   
       // Ajax Call & query URL using the user input
-      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=1000";
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
     //   console.log("You clicked ", keyword)
     //   console.log(queryURL);
   
@@ -85,7 +85,7 @@ function findgif(keyword) {
   var keyword = $("#search").val();
   
     // Ajax Call & query URL using the user input
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=1000";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=100";
     // console.log(queryURL);
 
 $.ajax({
@@ -107,7 +107,7 @@ $.ajax({
   // run through all the results, get the image and save in a variable 
   for (var i = 0; i < 1000; i++) {
 
-// To make gifs pause and Play us lines 111 - 119 to define gifImg then 137 - 149
+// To make gifs pause and Play use lines 111 - 119 to define gifImg then 137 - 149
     // var still = response.data[i].images.fixed_height_still.url;
     // var animated = response.data[i].images.fixed_height.url;
 
